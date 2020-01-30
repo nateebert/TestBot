@@ -4,6 +4,7 @@ import sys
 import json
 import requests
 from flask import Flask, request
+from random import random
 
 #define our flask app
 app = Flask(__name__)
@@ -33,10 +34,18 @@ def msg_received_from_group():
   log('{}'.format(data))
   
   #Check the text of the message sent to the chat to see if it matches our command word
-  if data['text'].lower() == "!test":
-    send_msg("Hello World!")
-  elif data['name'].lower() == "nate ebert" or data['user_id'] == '40743743':
-    send_msg("stfu you bitch")
+  if data['name'].lower() == "nate ebert" or data['user_id'] == '40743743':
+    n = random()
+    if n<=0.25:
+      send_msg("stfu you bitch")
+    elif n<=0.5:
+      send_msg("go to hell skank")
+    elif n<=0.75:
+      send_msg("eat shit and die")
+    else:
+      send_msg("go. fuck. yourself.")
+
+
 
 	
 	

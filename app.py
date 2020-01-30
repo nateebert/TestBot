@@ -7,6 +7,11 @@ from flask import Flask, request
 #define our flask app
 app = Flask(__name__)
 
+#logging function to help debug
+def log(msg):
+  print(str(msg))
+  sys.stdout.flush()
+
 #Sends a message to the chat that the bot originates from
 def send_msg(msg):
 

@@ -34,7 +34,7 @@ def msg_received_from_group():
   log('{}'.format(data))
   
   #Check the text of the message sent to the chat to see if it matches our command word
-  if data['name'].lower() == "jason everett":
+  if data['name'].lower() == "blorp":
     n = random()
     if n<=0.25:
       send_msg("cork it, space trash")

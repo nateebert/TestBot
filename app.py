@@ -19,26 +19,6 @@ def send_msg(msg):
         
   request = requests.post(url=url, data=data)
 
-#sends a picture and a message to the chat
-#Picture URL must be registered with GroupMe first
-def send_msg_pic(msg, picURL):
-
-  url  = 'https://api.groupme.com/v3/bots/post'
-
-  data ={
-  'bot_id' : os.getenv('GROUPME_BOT_ID'),
-  'text'   : msg,
-  "attachments" : [
-    {
-      "type"  : "image",
-      "url"   : picURL
-    }
-  ],
-  'picture_url': picURL
-  }
-
-  request = requests.post(url=url, data=data)
-
 
 #Method will automatically execute when our endpoint receives a POST call
 @app.route('/', methods=['POST'])
@@ -52,9 +32,6 @@ def msg_received_from_group():
   if data['text'].lower() == "!test":
     send_msg("Hello World!")
 	
-
-  elif data['text'].lower() == "!testpic":
-    send_msg_pic("Hello World!","https://i.groupme.com/1024x1024.jpeg.d733d6de5c36462f8d1cb67e3191b618")
 	
 	
 

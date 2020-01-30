@@ -19,14 +19,13 @@ def send_msg(msg):
         
   request = requests.post(url=url, data=data)
 
-
 #Method will automatically execute when our endpoint receives a POST call
 @app.route('/', methods=['POST'])
 def msg_received_from_group():
 
   #Format the data we receive as a JSON
-  data = request.get_json()
-  log('{}'.forat(data))
+  data = requests.get_json()
+  log('{}'.format(data))
   
   #Check the text of the message sent to the chat to see if it matches our command word
   if data['text'].lower() == "!test":

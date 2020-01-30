@@ -28,7 +28,6 @@ def send_msg(msg):
 #Method will automatically execute when our endpoint receives a POST call
 @app.route('/', methods=['POST'])
 def msg_received_from_group():
-  send_msg("stfu you bitch")
   #Format the data we receive as a JSON
   data = request.get_json()
   log('{}'.format(data))

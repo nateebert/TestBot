@@ -35,17 +35,17 @@ def msg_received_from_group():
   
   #Check the text of the message sent to the chat to see if it matches our command word
   if data['name'].lower() == "jason everett":
-		n = random()
-			if n<=0.25:
-				send_msg("cork it, space trash")
-			elif n<=0.5:
-				send_msg("the moon landing is fake and so is your personality")
-			elif n<=0.75:
-				send_msg("hey. hey jason. quiet.")
-			else:
-				send_msg("jason your face is the visual equivalent of the f-word")
-		elif data['text'].lower() == "!test":
-			send_msg("all set boss")
+    n = random()
+    if n<=0.25:
+      send_msg("cork it, space trash")
+    elif n<=0.5:
+      send_msg("the moon landing is fake and so is your personality")
+    elif n<=0.75:
+      send_msg("hey. hey jason. quiet.")
+    else:
+      send_msg("jason your face is the visual equivalent of the f-word")
+  elif data['text'].lower() == "!test":
+    send_msg("all set boss")
 
 
 

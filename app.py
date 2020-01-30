@@ -26,7 +26,7 @@ def msg_received_from_group():
 
   #Format the data we receive as a JSON
   data = request.get_json()
-  log('{}'.format(data))
+  log('{}'.forat(data))
   
   #Check the text of the message sent to the chat to see if it matches our command word
   if data['text'].lower() == "!test":

@@ -34,16 +34,18 @@ def msg_received_from_group():
   log('{}'.format(data))
   
   #Check the text of the message sent to the chat to see if it matches our command word
-  if data['name'].lower() == "nate ebert" or data['user_id'] == '40743743':
+  if data['name'].lower() == "jason everett":
     n = random()
     if n<=0.25:
-      send_msg("stfu you bitch")
+      send_msg("cork it, space trash")
     elif n<=0.5:
-      send_msg("go to hell skank")
+      send_msg("the moon landing is fake and so is your personality")
     elif n<=0.75:
-      send_msg("eat shit and die")
+      send_msg("hey. hey jason. quiet.")
     else:
-      send_msg("go. fuck. yourself.")
+      send_msg("jason your face is the visual equivalent of the f-word")
+   elif data['text'].lower() == "!test":
+     send_msg("all set boss")
 
 
 
